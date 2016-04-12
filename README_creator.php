@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Prueba de PHP</title>
+    <title>README_creator</title>
     <link type="text/css" href="style.css" rel="stylesheet">
     <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 </head>
