@@ -1,14 +1,14 @@
 <html>
 <head>
     <title>Prueba de PHP</title>
-    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link type="text/css" href="style.css" rel="stylesheet">
     <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 </head>
 <body>
 <form method="post" action="README_editor.php">
     <textarea class="text-left" name="titulo" placeholder="TITLE"></textarea><br/>
     <textarea class="text-left" name="subtitulo" placeholder="SUBTITLE"></textarea><br/>
-    <textarea rows="20" cols="55" class="text-left" name="cuerpo" placeholder="CONTENT"></textarea><br/>
+    <textarea rows="20" cols="55" class="text-left" name="cuerpo" placeholder="CONTENT"></textarea><input class="text-left" placeholder="CHARS PER LINE" type="number" name="longitud" maxlength="100"><br/>
     <textarea class="text-left" name="version" placeholder="VERSION"></textarea><br/>
     <textarea class="text-left" name="autor" placeholder="AUTHOR"></textarea><br/>
     <input class="text-left" type="submit">
@@ -37,7 +37,12 @@
         echo "<br/>";
 
         //-.-CONTENT-.-//
-        $longitud = 70; //Lenght of chars for line
+        if (!empty($_POST['longitud'])){
+            $longitud = $_POST['longitud'];//Lenght of chars per line
+        }else{
+            $longitud = 60;
+        }
+
         if (!empty($_POST['cuerpo'])){
             $cuerpo = $_POST['cuerpo'];
 
