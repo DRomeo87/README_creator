@@ -5,7 +5,7 @@
     <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 </head>
 <body>
-<form method="post" action="README_editor.php">
+<form method="post" action="README_creator.php">
     <textarea class="text-left" name="titulo" placeholder="TITLE"></textarea><br/>
     <textarea class="text-left" name="subtitulo" placeholder="SUBTITLE"></textarea><br/>
     <textarea rows="20" cols="55" class="text-left" name="cuerpo" placeholder="CONTENT"></textarea><input class="text-left" placeholder="CHARS PER LINE" type="number" name="longitud" maxlength="100"><br/>
